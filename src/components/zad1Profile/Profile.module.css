@@ -1,0 +1,26 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    font-size: 10px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.avatar {
+    width: 30%;
+    border-radius: 50%;
+    padding-bottom: 15px;
+}
+
+.name {
+    font-size: 10px;
+    font-weight: 700;
+}
+
