@@ -12,9 +12,14 @@ export const Statistics = ({ title = null, stats }) => {
   });
   return (
     <section className={StatisticsCSS.statistics}>
-      {{ title } !== null && <h2 className="title">{title}</h2>}
+      {title && <h2 className={StatisticsCSS.title}>{title}</h2>}
 
       <ul className={StatisticsCSS.statList}>{liRender}</ul>
     </section>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
 };

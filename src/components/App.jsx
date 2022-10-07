@@ -10,6 +10,7 @@ export const App = ({ children }) => {
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
+        padding: '50px 0',
       }}
     >
       {children}
@@ -18,5 +19,5 @@ export const App = ({ children }) => {
 };
 
 App.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
 };

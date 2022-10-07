@@ -18,7 +18,9 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         </li>
         <li className={ProfileCSS.item}>
           <span className={ProfileCSS.label}>Views</span>
-          <span className={ProfileCSS.quantity}>{stats.views}</span>
+          <span className={ProfileCSS.quantity}>
+            {stats.views.toLocaleString('en')}
+          </span>
         </li>
         <li className={ProfileCSS.item}>
           <span className={ProfileCSS.label}>Likes</span>
