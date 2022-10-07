@@ -8,6 +8,8 @@ import data from './components/zad2Statistic/data.json';
 import { Statistics } from './components/zad2Statistic/Statistic';
 import friends from './components/zad3Friends/friends.json';
 import { FriendList } from './components/zad3Friends/FriendsList';
+import transactions from './components/zad4Transaction/transactions.json';
+import { TransactionHistory } from './components/zad4Transaction/Transaction';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -21,6 +23,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </App>
   </React.StrictMode>
 );
