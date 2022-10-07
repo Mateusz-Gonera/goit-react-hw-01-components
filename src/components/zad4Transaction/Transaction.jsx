@@ -5,14 +5,14 @@ export const TransactionHistory = ({ items }) => {
   const liRender = items.map(item => {
     return (
       <tr className={TransactionsCSS.row} key={item.id}>
+        <td className={TransactionsCSS.cell}>{item.type}</td>
         <td className={TransactionsCSS.cell}>{item.amount}</td>
         <td className={TransactionsCSS.cell}>{item.currency}</td>
-        <td className={TransactionsCSS.cell}>{item.type}</td>
       </tr>
     );
   });
   return (
-    <table className="transactionHistory">
+    <table className={TransactionsCSS.transactionHistory}>
       <thead className={TransactionsCSS.head}>
         <tr>
           <th className={TransactionsCSS.headCell}>Type</th>
