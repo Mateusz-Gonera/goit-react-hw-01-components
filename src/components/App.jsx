@@ -10,7 +10,7 @@ export const App = ({ children }) => {
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
-        padding: '50px 0',
+        padding: '50px 10px',
       }}
     >
       {children}
