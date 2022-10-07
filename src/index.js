@@ -4,6 +4,8 @@ import { App } from 'components/App';
 import './index.css';
 import user from './components/zad1Profile/user.json';
 import { Profile } from './components/zad1Profile/Profile';
+import data from './components/zad2Statistic/data.json';
+import { Statistics } from './components/zad2Statistic/Statistic';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         avatar={user.avatar}
         stats={user.stats}
       />
+      <Statistics title="Upload stats" stats={data} />
     </App>
   </React.StrictMode>
 );
