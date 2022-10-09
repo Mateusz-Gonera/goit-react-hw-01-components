@@ -25,3 +25,7 @@ export const TransactionHistory = ({ items }) => {
     </table>
   );
 };
+
+TransactionHistory.propTypes = {
+  items: PropTypes.array.isRequired,
+};
