@@ -2,6 +2,19 @@ import PropTypes from 'prop-types';
 import ProfileCSS from './Profile.module.css';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
+  const liRender = [
+    ['Followers', stats.followers],
+    ['Views', stats.views.toLocaleString('en')],
+    ['Likes', stats.likes],
+  ].map(([string, value], index) => {
+    return (
+      <li key={index} className={ProfileCSS.item}>
+        <span className={ProfileCSS.label}>{string}</span>
+        <span className={ProfileCSS.quantity}>{value}</span>
+      </li>
+    );
+  });
+
   return (
     <div className={ProfileCSS.profile}>
       <div className={ProfileCSS.description}>
@@ -10,23 +23,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         <p className={ProfileCSS.tag}>{tag}</p>
         <p className={ProfileCSS.location}>{location}</p>
       </div>
-
-      <ul className={ProfileCSS.stats}>
-        <li className={ProfileCSS.item}>
-          <span className={ProfileCSS.label}>Followers</span>
-          <span className={ProfileCSS.quantity}>{stats.followers}</span>
-        </li>
-        <li className={ProfileCSS.item}>
-          <span className={ProfileCSS.label}>Views</span>
-          <span className={ProfileCSS.quantity}>
-            {stats.views.toLocaleString('en')}
-          </span>
-        </li>
-        <li className={ProfileCSS.item}>
-          <span className={ProfileCSS.label}>Likes</span>
-          <span className={ProfileCSS.quantity}>{stats.likes}</span>
-        </li>
-      </ul>
+      <ul className={ProfileCSS.stats}>{liRender}</ul>
     </div>
   );
 };
