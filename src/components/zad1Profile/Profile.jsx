@@ -3,12 +3,12 @@ import ProfileCSS from './Profile.module.css';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   const liRender = [
-    ['Followers', stats.followers],
-    ['Views', stats.views.toLocaleString('en')],
-    ['Likes', stats.likes],
-  ].map(([string, value], index) => {
+    [1, 'Followers', stats.followers],
+    [2, 'Views', stats.views.toLocaleString('en')],
+    [3, 'Likes', stats.likes],
+  ].map(([id, string, value]) => {
     return (
-      <li key={index} className={ProfileCSS.item}>
+      <li key={id} className={ProfileCSS.item}>
         <span className={ProfileCSS.label}>{string}</span>
         <span className={ProfileCSS.quantity}>{value}</span>
       </li>
