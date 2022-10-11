@@ -3,8 +3,13 @@ import StatisticsCSS from './Statistic.module.css';
 
 export const Statistics = ({ title = null, stats }) => {
   const liRender = stats.map(stat => {
+    let bgColor = Math.floor(Math.random() * 16777215).toString(16);
     return (
-      <li key={stat.id} className={StatisticsCSS.item}>
+      <li
+        style={{ backgroundColor: '#' + bgColor }}
+        key={stat.id}
+        className={StatisticsCSS.item}
+      >
         <span className={StatisticsCSS.label}>{stat.label}</span>
         <span className={StatisticsCSS.percentage}>{stat.percentage}%</span>
       </li>
